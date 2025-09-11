@@ -1,0 +1,122 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image:  url(OIP.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgb(76, 209, 209);
+    padding: 22px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 12px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.profile-info {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    font-size: 35px;
+    color: rgb(0, 0, 255);
+    margin-bottom: 0px;
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    color: rgb(255, 0, 0);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.profile-info p {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.profile-info button {
+    background-color: green;
+    color: white;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    box-shadow: #2E865F;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(88, 253, 22, 0.5);
+}
+
+.profile-info button:hover {
+    background-color: #86472e;
+}
+
+.profile-picture {
+    width: 30%;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
