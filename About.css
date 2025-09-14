@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image:  url(OIP.webp);
+    background-image:  url(OIP.WEBP);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,3 +78,4 @@ footer {
     text-align: center;
 
 }
+
