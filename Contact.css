@@ -2,10 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image:  url(OIP.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .container {
@@ -49,6 +45,13 @@ header nav a {
     text-decoration: none;
 }
 
+main {
+    background-image:  url(OIP.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .contact {
     padding: 50px;
 }
@@ -90,3 +93,4 @@ footer {
     text-align: center;
 
 }
+
