@@ -47,7 +47,10 @@ header nav a {
 }
 
 main {
-    background-color: rgb(203, 229, 252);
+    background-image:  url(OIP.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 84px;
 }
 
@@ -69,4 +72,5 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+
 }
