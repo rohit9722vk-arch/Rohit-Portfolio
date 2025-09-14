@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:  url(OIP.WEBP);
-    background-size: 1000px;
+    background-size: border;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -53,6 +53,7 @@ header nav a {
     padding: 50px;
     text-align: center;
 }
+
 
 
 
