@@ -47,7 +47,7 @@ header nav a {
 
 .contact {
     padding: 50px;
-    background-image:  url(OIP.webp);
+    background-image:  url(OIP.WEBP);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -86,6 +86,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
