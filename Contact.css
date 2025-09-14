@@ -45,15 +45,12 @@ header nav a {
     text-decoration: none;
 }
 
-main {
+.contact {
+    padding: 50px;
     background-image:  url(OIP.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.contact {
-    padding: 50px;
 }
 
 .contact form {
@@ -84,6 +81,10 @@ main {
 
 .contact-info {
     padding: 50px;
+    background-image:  url(OIP.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 footer {
@@ -93,5 +94,6 @@ footer {
     text-align: center;
 
 }
+
 
 
