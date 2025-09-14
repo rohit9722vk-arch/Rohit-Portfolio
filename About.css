@@ -2,7 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(203, 229, 252);
+    background-image:  url(OIP.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -66,7 +69,6 @@ header nav a {
 
 .mission {
     padding: 50px;
-    background-color: rgb(203, 229, 252);
 }
 
 footer {
@@ -74,4 +76,5 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+
 }
