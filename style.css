@@ -2,10 +2,6 @@ body {
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background-image:  url(OIP.WEBP);
-    background-size: cover;
-    background-position: 100vh;
 }
 
 header {
@@ -47,7 +43,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px;
+    padding: 84px;
+    background-image:  url(OIP.WEBP);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .profile-info {
@@ -120,6 +120,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
