@@ -2,10 +2,9 @@ body {
     font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: cover;
+    height: 150px;
+    width: 150px;
     background-image:  url(OIP.WEBP);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: block;
 }
 
@@ -121,6 +120,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
