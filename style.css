@@ -4,7 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     background-image:  url(OIP.WEBP);
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -121,6 +121,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
