@@ -47,10 +47,22 @@ header nav a {
 
 .contact {
     padding: 50px;
-    background-image:  url(OIP.WEBP);
+    background-image: url(OIP.WEBP);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* Add animation for scrolling background */
+    animation: bg-scroll 20s linear infinite;
+}
+
+/* Keyframes for horizontal scrolling animation */
+@keyframes bg-scroll {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
 }
 
 .contact form {
@@ -84,12 +96,4 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
-
 }
-
-
-
-
-
-
-

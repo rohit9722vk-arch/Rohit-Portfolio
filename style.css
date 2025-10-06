@@ -44,11 +44,21 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 84px;
-    background:
-    linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), /* white overlay with 50% opacity */
-    url('OIP.WEBP');
-  background-size: cover;
-  background-position: center;
+    background: url('OIP.WEBP');
+    background-size: cover;
+    background-position: center;
+    /* Add animation for scrolling background */
+    animation: bg-scroll 20s linear infinite;
+}
+
+/* Keyframes for horizontal scrolling animation */
+@keyframes bg-scroll {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
 }
 
 .profile-info {
@@ -121,31 +131,3 @@ main {
     align-items: center;
     gap: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
