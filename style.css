@@ -4,7 +4,7 @@ body {
     padding: 0;
     height: 100vh;
     background-image:  url(OIP.WEBP);
-    mix-blend-mode: color-burn;
+    mix-blend-mode: normal;
 }
 
 header {
@@ -119,6 +119,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
