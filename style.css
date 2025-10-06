@@ -41,6 +41,8 @@ header nav a {
 
 main {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 84px;
     background-image:  url(OIP.WEBP);
     background-size: cover;
@@ -118,6 +120,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
