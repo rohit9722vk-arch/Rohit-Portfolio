@@ -44,10 +44,11 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 84px;
-    background-image:  url(OIP.WEBP);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:
+    linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), /* white overlay with 50% opacity */
+    url('OIP.WEBP');
+  background-size: cover;
+  background-position: center;
 }
 
 .profile-info {
@@ -120,6 +121,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
