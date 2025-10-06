@@ -6,6 +6,7 @@ body {
     background-image:  url(OIP.WEBP);
     background-size: 100%;
     background-repeat: no-repeat;
+    display: block;
 }
 
 header {
@@ -120,6 +121,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+
 
 
 
