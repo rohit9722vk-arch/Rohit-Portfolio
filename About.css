@@ -63,9 +63,9 @@ main {
     max-width: 900px;
     margin: 40px auto 0 auto;
     padding: 0 20px 40px 20px;
-    background: rgba(255,255,255,0.88);
+    /* Removed background color */
     border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18); /* Keep shadow for readability */
 }
 
 section {
@@ -95,7 +95,7 @@ section {
 }
 
 .team-card {
-    background: #fff;
+    background: rgba(255,255,255,0.85);
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(76,209,209,0.11);
     padding: 30px 22px 22px 22px;
