@@ -1,4 +1,4 @@
-body {
+and body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -126,6 +126,7 @@ main {
     align-items: center;
     gap: 20px;
 }
+/* FOOTER made consistent with other pages */
 footer {
     background: #053b73;
     color: #fff;
