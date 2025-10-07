@@ -11,6 +11,7 @@ body {
     0% { background-position: 0% center; }
     100% { background-position: 100% center; }
 }
+/* HEADER & NAVBAR (like Services.css) */
 header {
     background: rgba(76, 209, 209, 0.95);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -50,6 +51,8 @@ header {
     background: #053b73;
     color: #fff;
 }
+
+/* MAIN CONTENT */
 main {
     max-width: 900px;
     margin: 40px auto 0 auto;
@@ -57,52 +60,121 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
+
 .contact {
-    padding: 50px 0 10px 0;
+    margin-top: 32px;
 }
+
 .contact h2 {
     color: #053b73;
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 22px;
     font-weight: 700;
+    text-align: left;
 }
-.contact p {
-    font-size: 1.15rem;
-    color: #222;
-    line-height: 1.7;
-    margin-top: 0;
+
+.contact-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-start;
 }
-.contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 22px 18px;
-    border-radius: 12px;
-    /* Remove white background to make it transparent */
+
+.contact-card {
     background: transparent;
+    border-radius: 16px;
     box-shadow: 0 2px 12px rgba(76,209,209,0.11);
+    padding: 30px 22px 22px 22px;
+    text-align: left;
+    flex: 1 1 320px;
+    min-width: 280px;
 }
+
 .contact label {
     display: block;
     margin-bottom: 10px;
 }
-.contact input[type="text"], .contact input[type="email"] {
+.contact input[type="text"], .contact input[type="email"], .contact textarea {
     width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 10px;
     border: 1px solid #ccc;
     background: rgba(255,255,255,0.3);
     color: #053b73;
-} 
-.contact textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background: rgba(255,255,255,0.3);
-    color: #053b73;
+    border-radius: 8px;
+    font-size: 1rem;
 }
-.contact-info {
-    margin-top: 28px;
-    /* Remove white background to make it
+.contact textarea {
+    height: 90px;
+    resize: vertical;
+}
+.contact button {
+    background-color: #059862;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+}
+.contact button:hover {
+    background: #053b73;
+    color: #fff;
+}
+
+.contact-info-card {
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(76,209,209,0.11);
+    padding: 30px 22px 22px 22px;
+    text-align: left;
+    flex: 1 1 220px;
+    min-width: 220px;
+    color: #222;
+}
+
+.contact-info-card h3 {
+    color: #053b73;
+    font-size: 1.2rem;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+.contact-info-card p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+/* FOOTER (like Services.css) */
+footer {
+    background: #053b73;
+    color: #fff;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+@media (max-width: 700px) {
+    main {
+        max-width: 98vw;
+        margin: 10px auto 0 auto;
+        border-radius: 8px;
+        padding: 8px 4vw 24px 4vw;
+    }
+    .navbar ul {
+        gap: 13px;
+    }
+    .contact-form-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-card, .contact-info-card {
+        min-width: 180px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
