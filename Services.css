@@ -109,6 +109,7 @@ footer {
 }
 @media (max-width: 700px) {
     main {
+        flex-direction: column;
         max-width: 98vw;
         margin: 10px auto 0 auto;
         border-radius: 8px;
