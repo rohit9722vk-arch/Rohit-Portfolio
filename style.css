@@ -1,133 +1,154 @@
 body {
-    font-family: arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: url('OIP.WEBP');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: bg-scroll 30s linear infinite;
 }
-
+@keyframes bg-scroll {
+    0% { background-position: 0% center; }
+    100% { background-position: 100% center; }
+}
 header {
-    background-color: rgb(76, 209, 209);
-    padding: 22px;
-    text-align: left;
-    color: rgb(0, 0, 0);
+    background: rgba(76, 209, 209, 0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
 header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 header nav .logo {
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #053b73;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
-
 header nav ul {
+    display: flex;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    font-size: 12px;
+    font-size: 1rem;
 }
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav a {
-    color: rgb(0, 0, 0);
+header nav ul li a {
+    color: #053b73;
     text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
 }
-
+header nav ul li a:hover,
+header nav ul li a.active {
+    background: #053b73;
+    color: #fff;
+}
 main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 84px;
-    background: url('OIP.WEBP');
-    background-size: cover;
-    background-position: center;
-    /* Add animation for scrolling background */
-    animation: bg-scroll 20s linear infinite;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    /* No background color */
 }
-
-/* Keyframes for horizontal scrolling animation */
-@keyframes bg-scroll {
-    0% {
-        background-position: 0% center;
-    }
-    100% {
-        background-position: 100% center;
-    }
-}
-
 .profile-info {
     width: 60%;
     margin-left: 20px;
 }
-
 .profile-info h1 {
-    font-size: 35px;
-    color: rgb(0, 0, 255);
+    font-size: 2.2rem;
+    color: #053b73;
     margin-bottom: 0px;
 }
-
 .profile-info h2 {
-    font-size: 28px;
-    color: rgb(255, 0, 0);
+    font-size: 1.5rem;
+    color: #d45e16;
     margin-bottom: 0px;
     margin-top: 0px;
 }
-
 .profile-info p {
-    font-size: 15px;
+    font-size: 1.1rem;
     margin-top: 3px;
 }
-
 .profile-info button {
-    background-color: green;
+    background-color: #059862;
     color: white;
     border: 2px solid #000000;
     border-radius: 50px;
-    box-shadow: #2E865F;
+    box-shadow: 0 0 20px rgba(88, 253, 22, 0.5);
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    box-shadow: 0 0 20px rgba(88, 253, 22, 0.5);
+    transition: background 0.2s;
 }
-
 .profile-info button:hover {
     background-color: #86472e;
 }
-
 .profile-picture {
     width: 30%;
 }
-
 .profile-picture img {
     border-radius: 50%;
     width: 100%;
     height: auto;
     border: 2px solid #000000;
 }
-
 .social-links {
     display: flex;
     gap: 10px;
 }
-
 .social-links a {
     margin-right: 10px;
 }
-
 .social-links img {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
+    filter: grayscale(0.2);
+    transition: filter 0.2s;
 }
-
+.social-links img:hover {
+    filter: none;
+}
 .container {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+footer {
+    background: #053b73;
+    color: #fff;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 40px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        max-width: 98vw;
+        margin: 10px auto 0 auto;
+        border-radius: 8px;
+        padding: 8px 4vw 24px 4vw;
+    }
+    .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    header nav ul {
+        gap: 13px;
+    }
 }

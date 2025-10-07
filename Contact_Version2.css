@@ -57,74 +57,53 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
-section {
-    margin-bottom: 40px;
+.contact {
+    padding: 50px 0 10px 0;
 }
-.about h2, .team h2, .mission h2 {
+.contact h2 {
     color: #053b73;
     font-size: 2rem;
     margin-bottom: 10px;
-    text-align: left;
     font-weight: 700;
 }
-.about p, .mission p {
+.contact p {
     font-size: 1.15rem;
     color: #222;
     line-height: 1.7;
     margin-top: 0;
 }
-.team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: flex-start;
-}
-.team-card {
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 22px 18px;
+    border-radius: 12px;
     background: rgba(255,255,255,0.85);
-    border-radius: 16px;
     box-shadow: 0 2px 12px rgba(76,209,209,0.11);
-    padding: 30px 22px 22px 22px;
-    text-align: center;
-    max-width: 220px;
-    flex: 1 1 220px;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
-.team-card:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(76,209,209,0.15);
-}
-.team-card img {
-    width: 88px;
-    height: 88px;
-    object-fit: cover;
-    border-radius: 50%;
+.contact label {
+    display: block;
     margin-bottom: 10px;
-    border: 3px solid #053b73;
 }
-.team-card h3 {
-    margin: 8px 0 4px 0;
-    color: #053b73;
-    font-size: 1.18rem;
+.contact input[type="text"], .contact input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+} 
+.contact textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
-.team-card p {
-    margin: 0 0 10px 0;
-    color: #333;
-    font-size: 1rem;
-}
-.team-card .social {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 8px;
-}
-.team-card .social img {
-    width: 28px;
-    height: 28px;
-    filter: grayscale(0.3);
-    transition: filter 0.2s;
-}
-.team-card .social img:hover {
-    filter: grayscale(0) drop-shadow(0 0 4px #4dd1d1);
+.contact-info {
+    margin-top: 28px;
+    background: rgba(255,255,255,0.85);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(76,209,209,0.11);
 }
 footer {
     background: #053b73;
@@ -143,11 +122,13 @@ footer {
         border-radius: 8px;
         padding: 8px 4vw 24px 4vw;
     }
-    .team-cards {
-        flex-direction: column;
-        align-items: center;
-    }
     .navbar ul {
         gap: 13px;
+    }
+    .contact {
+        padding: 20px 0 5px 0;
+    }
+    .contact form {
+        padding: 10px 8px;
     }
 }
