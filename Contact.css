@@ -77,7 +77,8 @@ main {
     margin: 0 auto;
     padding: 22px 18px;
     border-radius: 12px;
-    background: rgba(255,255,255,0.85);
+    /* Remove white background to make it transparent */
+    background: transparent;
     box-shadow: 0 2px 12px rgba(76,209,209,0.11);
 }
 .contact label {
@@ -90,6 +91,8 @@ main {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
+    background: rgba(255,255,255,0.3);
+    color: #053b73;
 } 
 .contact textarea {
     width: 100%;
@@ -97,38 +100,9 @@ main {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
+    background: rgba(255,255,255,0.3);
+    color: #053b73;
 }
 .contact-info {
     margin-top: 28px;
-    background: rgba(255,255,255,0.85);
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(76,209,209,0.11);
-}
-footer {
-    background: #053b73;
-    color: #fff;
-    padding: 14px 0;
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 40px;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-}
-@media (max-width: 700px) {
-    main {
-        max-width: 98vw;
-        margin: 10px auto 0 auto;
-        border-radius: 8px;
-        padding: 8px 4vw 24px 4vw;
-    }
-    .navbar ul {
-        gap: 13px;
-    }
-    .contact {
-        padding: 20px 0 5px 0;
-    }
-    .contact form {
-        padding: 10px 8px;
-    }
-}
+    /* Remove white background to make it
