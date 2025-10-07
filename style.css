@@ -134,6 +134,9 @@ footer {
     margin-top: 40px;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media (max-width: 700px) {
     main {
