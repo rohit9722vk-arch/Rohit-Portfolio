@@ -103,7 +103,7 @@ main {
     border-radius: 50%;
     width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 24px;
     border: 2px solid #000000;
 }
 .social-links {
@@ -114,11 +114,10 @@ main {
     margin-right: 10px;
 }
 .social-links img {
-    width: 55px;
-    height: 55px;
+    width: 64px;
+    height: 64px;
     filter: grayscale(0.2);
     transition: background 0.2s, color 0.2s;
-    border: 2px solid #000000;
     border-radius: 50px;
 }
 .social-links img:hover {
