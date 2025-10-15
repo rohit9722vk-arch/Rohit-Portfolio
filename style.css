@@ -114,7 +114,7 @@ main {
     width: 55px;
     height: 55px;
     filter: grayscale(0.2);
-    transition: ;
+    transition: background 0.2s, color 0.2s;
 }
 .social-links img:hover {
     transform: translateY(-6px) scale(1.03);
