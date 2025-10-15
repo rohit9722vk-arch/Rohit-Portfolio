@@ -118,7 +118,7 @@ main {
     height: 64px;
     filter: grayscale(0.2);
     transition: background 0.2s, color 0.2s;
-    border-radius: 50px;
+    border-radius: 70px;
 }
 .social-links img:hover {
     transform: translateY(-6px) scale(1.03);
