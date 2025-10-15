@@ -109,7 +109,7 @@ main {
     transition: background 0.2s;
 }
 .service-card button:hover {
-    background-color: #00ffffff;
+    background-color: #ffffff;
 }
 footer {
     background: #053b73;
