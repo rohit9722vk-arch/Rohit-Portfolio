@@ -89,10 +89,12 @@ main {
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 .profile-info button:hover {
     background-color: #86472e;
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(76,209,209,0.15);
 }
 .profile-picture {
     width: 30%;
@@ -101,6 +103,7 @@ main {
     border-radius: 50%;
     width: 100%;
     height: auto;
+    margin-top: 10px;
     border: 2px solid #000000;
 }
 .social-links {
@@ -116,6 +119,7 @@ main {
     filter: grayscale(0.2);
     transition: background 0.2s, color 0.2s;
     border: 2px solid #000000;
+    border-radius: 50px;
 }
 .social-links img:hover {
     transform: translateY(-6px) scale(1.03);
