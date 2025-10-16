@@ -10,6 +10,7 @@ body {
 header {
     background: rgba(76, 209, 209, 0.95);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
 }
 header nav {
     max-width: 1750px;
@@ -25,6 +26,7 @@ header nav .logo {
     color: #053b73;
     text-decoration: none;
     letter-spacing: 1px;
+    text-align: left;
 }
 header nav ul {
     display: flex;
