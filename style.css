@@ -14,7 +14,7 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 header nav {
-    max-width: 1750px;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
