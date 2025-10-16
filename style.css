@@ -100,6 +100,7 @@ main {
     width: 100%;
     height: auto;
     margin-top: 36px;
+    margin-right: 32px;
     border: 2px solid #000000;
 }
 .social-links {
@@ -133,21 +134,4 @@ footer {
     margin-top: 40px;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
-}
-@media (max-width: 700px) {
-    main {
-        flex-direction: column;
-        flex-direction: column;
-        max-width: 98vw;
-        margin: 10px auto 0 auto;
-        border-radius: 8px;
-        padding: 8px 4vw 24px 4vw;
-    }
-    .container {
-        flex-direction: column;
-        gap: 12px;
-    }
-    header nav ul {
-        gap: 13px;
-    }
 }
