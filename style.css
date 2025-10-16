@@ -16,6 +16,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 10px ;
 }
 header nav .logo {
     font-size: 1.5rem;
