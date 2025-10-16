@@ -135,7 +135,10 @@ footer {
     padding: 14px 0;
     text-align: center;
     font-size: 1rem;
-    margin-top: 40px;
+    align-items: bottom;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    
 }
