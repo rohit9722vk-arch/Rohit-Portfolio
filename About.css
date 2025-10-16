@@ -5,7 +5,7 @@ body {
     background-image: url(OIP.WEBP);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    backgroumd-attachment: fixed;
+    background-attachment: fixed;
 }
 header {
     background: rgba(76, 209, 209, 0.95);
