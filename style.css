@@ -5,11 +5,6 @@ body {
     background: url('OIP.WEBP');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    animation: bg-scroll 30s linear infinite;
-}
-@keyframes bg-scroll {
-    0% { background-position: 0% center; }
-    100% { background-position: 100% center; }
 }
 header {
     background: rgba(76, 209, 209, 0.95);
