@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: url('OIP.WEBP');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     animation: bg-scroll 30s linear infinite;
 }
