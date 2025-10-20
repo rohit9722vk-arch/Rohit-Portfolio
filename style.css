@@ -65,7 +65,7 @@ main {
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 40px;
-    padding-right: 180px;
+    padding-right: 220px;
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
@@ -113,7 +113,7 @@ main {
     height: auto;
     margin-top: 36px;
     margin-right: 32px;
-    margin-left: 140px;
+    margin-left: 200px;
     border: 2px solid #000000;
 }
 .social-links {
