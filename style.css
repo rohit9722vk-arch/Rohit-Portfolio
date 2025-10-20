@@ -120,8 +120,8 @@ main {
     margin-right: 10px;
 }
 .social-links img {
-    width: 74px;
-    height: 74px;
+    width: 84px;
+    height: 84px;
     filter: grayscale(0.2);
     transition: background 0.2s, color 0.2s;
     border-radius: 100%;
