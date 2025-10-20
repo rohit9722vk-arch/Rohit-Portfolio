@@ -52,6 +52,7 @@ main {
     padding: 0 20px 40px 20px;
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    text-align: center;
 }
 section {
     margin-bottom: 40px;
