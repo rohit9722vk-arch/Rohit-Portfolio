@@ -70,18 +70,18 @@ main {
     margin-left: 20px;
 }
 .profile-info h1 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     color: #053b73;
     margin-bottom: 0px;
 }
 .profile-info h2 {
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     color: #d45e16;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 .profile-info p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-top: 3px;
 }
 .profile-info button {
@@ -89,8 +89,8 @@ main {
     color: white;
     border: 2px solid #000000;
     border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.5rem;
     cursor: pointer;
     text-align: center;
     transition: background 0.2s, color 0.2s;
