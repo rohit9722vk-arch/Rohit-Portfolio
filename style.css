@@ -28,6 +28,7 @@ header nav .logo {
     text-decoration: none;
     letter-spacing: 1px;
     text-align: left;
+    margin-left: 3px;
 }
 header nav ul {
     display: flex;
