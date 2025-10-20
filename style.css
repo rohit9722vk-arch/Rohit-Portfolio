@@ -102,7 +102,7 @@ main {
     box-shadow: 0 8px 32px rgba(76,209,209,0.15);
 }
 .profile-picture {
-    width: 30%;
+    width: 40%;
 }
 .profile-picture img {
     border-radius: 50%;
@@ -110,6 +110,7 @@ main {
     height: auto;
     margin-top: 36px;
     margin-right: 32px;
+    margin-left: 120px;
     border: 2px solid #000000;
 }
 .social-links {
