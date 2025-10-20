@@ -56,6 +56,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    size: cover;
     max-width: 900px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -118,8 +119,8 @@ main {
     margin-right: 10px;
 }
 .social-links img {
-    width: 64px;
-    height: 64px;
+    width: 74px;
+    height: 74px;
     filter: grayscale(0.2);
     transition: background 0.2s, color 0.2s;
     border-radius: 100%;
