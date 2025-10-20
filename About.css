@@ -11,29 +11,33 @@ header {
     background: rgba(76, 209, 209, 0.95);
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-.navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 12px 20px;
+header nav {
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 15px ;
+    padding: 25px 0 ;
 }
-.logo a {
-    font-size: 1.5rem;
+header nav .logo {
+    font-size: 2.0rem;
     font-weight: bold;
     color: #053b73;
     text-decoration: none;
     letter-spacing: 1px;
+    text-align: left;
+    margin-left: 3px;
 }
-.navbar ul {
+header nav ul {
     display: flex;
-    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 30px;
+    font-size: 1.5rem;
+    text-align: right;
 }
-.navbar ul li a {
+header nav ul li a {
     color: #053b73;
     text-decoration: none;
     font-weight: 500;
@@ -41,8 +45,8 @@ header {
     border-radius: 6px;
     transition: background 0.2s, color 0.2s;
 }
-.navbar ul li a:hover,
-.navbar ul li a.active {
+header nav ul li a:hover,
+header nav ul li a.active {
     background: #053b73;
     color: #fff;
 }
@@ -129,23 +133,9 @@ footer {
     padding: 14px 0;
     text-align: center;
     font-size: 1rem;
-    margin-top: 40px;
+    margin-top: 15px;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
-}
-@media (max-width: 700px) {
-    main {
-        flex-direction: column;
-        max-width: 98vw;
-        margin: 10px auto 0 auto;
-        border-radius: 8px;
-        padding: 8px 4vw 24px 4vw;
-    }
-    .team-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navbar ul {
-        gap: 13px;
-    }
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
 }
