@@ -53,7 +53,6 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     text-align: center;
-    align-items: center;
 }
 section {
     margin-bottom: 40px;
@@ -75,6 +74,7 @@ section {
     flex-wrap: wrap;
     gap: 32px;
     justify-content: flex-start;
+    align: center;
 }
 .team-card {
     background-color: #1B98E040;
