@@ -114,3 +114,19 @@ footer {
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
 }
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        max-width: 98vw;
+        margin: 10px auto 0 auto;
+        border-radius: 8px;
+        padding: 8px 4vw 24px 4vw;
+    }
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar ul {
+        gap: 13px;
+    }
+}
