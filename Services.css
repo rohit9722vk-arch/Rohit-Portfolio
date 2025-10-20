@@ -53,6 +53,7 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     text-align: center;
+    align-items: center;
 }
 .services {
     margin-top: 32px;

@@ -53,6 +53,7 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     text-align: center;
+    align-items: center;
 }
 section {
     margin-bottom: 40px;
@@ -61,7 +62,6 @@ section {
     color: #053b73;
     font-size: 2rem;
     margin-bottom: 10px;
-    text-align: left;
     font-weight: 700;
 }
 .about p, .mission p {
