@@ -51,6 +51,7 @@ header nav ul li a.active {
     color: #fff;
 }
 main {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 900px;
