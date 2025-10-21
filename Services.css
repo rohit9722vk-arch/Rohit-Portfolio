@@ -80,6 +80,7 @@ main {
     gap: 32px;
     flex-wrap: wrap;
     justify-content: flex-start;
+    text-align: center;
 }
 .service-card {
     background-color: #1B98E040;
@@ -97,7 +98,7 @@ main {
 .service-card h3 {
     margin: 8px 0 4px 0;
     color: #053b73;
-    font-size: 1.65rem;
+    font-size: 1.44rem;
 }
 .service-card p {
     margin: 0 0 10px 0;
