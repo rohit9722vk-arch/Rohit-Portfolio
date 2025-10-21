@@ -51,7 +51,6 @@ header nav ul li a.active {
     color: #fff;
 }
 main {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 900px;
@@ -71,12 +70,12 @@ section {
 }
 .about h2, .team h2, .mission h2 {
     color: #053b73;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     font-weight: 700;
 }
 .about p, .mission p {
-    font-size: 1.15rem;
+    font-size: 1.65rem;
     color: #222;
     line-height: 1.7;
     margin-top: 0;
@@ -118,7 +117,7 @@ section {
 .team-card p {
     margin: 0 0 10px 0;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .team-card .social {
     display: flex;
