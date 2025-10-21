@@ -51,12 +51,20 @@ header nav ul li a.active {
     color: #fff;
 }
 main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 900px;
-    margin: 40px auto 0 auto;
-    padding: 0 20px 40px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 355px;
     border-radius: 20px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-    text-align: center;
 }
 section {
     margin-bottom: 40px;
