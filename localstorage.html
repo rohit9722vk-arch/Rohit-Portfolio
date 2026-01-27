@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Example</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h2>Store Data in LocalStorage</h2>
+
+    <label>Enter Name:</label><br>
+    <input type="text" id="name"><br><br>
+
+    <label>Enter Email:</label><br>
+    <input type="email" id="email"><br><br>
+
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="clearData()">Clear Data</button>
+
+    <h3>Stored Data:</h3>
+    <p id="output"></p>
+
+</body>
+</html>
