@@ -110,6 +110,7 @@ main {
     width: 100%;
     height: auto;
     border: 2px solid #000000;
+    margin-left: 310px;
 }
 .social-links {
     display: block;
