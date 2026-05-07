@@ -3,54 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Rohit Portfolio</title>
+    <meta name="description" content="About Rohit Vishwakarma - Learn more about our team and mission in web development.">
+    <meta name="author" content="Rohit Vishwakarma">
+    <meta name="theme-color" content="#053b73">
+    <title>About | Rohit Vishwakarma Portfolio</title>
     <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a class="logo" href="index.html">Portfolio</a>
-            <ul>
-                <li><a href="localstorage.html">Login</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a class="active" href="about.html">About</a></li>
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Rohit Portfolio Home">Portfolio</a>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                <li role="none"><a href="localstorage.html" role="menuitem" aria-label="Login Page">Login</a></li>
+                <li role="none"><a href="contact.html" role="menuitem" aria-label="Contact">Contact</a></li>
+                <li role="none"><a href="services.html" role="menuitem" aria-label="Services">Services</a></li>
+                <li role="none"><a href="about.html" class="active" role="menuitem" aria-label="About">About</a></li>
             </ul>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
-    <main>
-        <section class="about">
-            <h2>Our Story</h2>
+
+    <main role="main" aria-label="About Page Content">
+        <section class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Our Story</h2>
             <p>
-                We are a team of professionals dedicated to delivering exceptional results. With years of experience in our field, we have built a reputation for quality and reliability. Our journey is driven by a passion for excellence and a commitment to our clients.
+                We are a team of professionals dedicated to delivering exceptional results. With years of experience in our field, we have built a reputation for quality and reliability. Our journey began with a simple mission: to create innovative web solutions that exceed client expectations.
             </p>
         </section>
-        <section class="team">
-            <h2>Meet Our Team</h2>
+
+        <section class="team" aria-labelledby="team-heading">
+            <h2 id="team-heading">Meet Our Team</h2>
             <div class="team-cards">
                 <div class="team-card">
-                    <img src="Rohit-pic.jfif" alt="Rohit Vishwakarma">
+                    <figure>
+                        <img src="Rohit-pic.jfif" alt="Rohit Vishwakarma" loading="lazy" decoding="async">
+                        <figcaption class="sr-only">Profile picture of Rohit Vishwakarma</figcaption>
+                    </figure>
                     <h3>Rohit Vishwakarma</h3>
-                    <p>Operation Manager</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com" target="_blank"><img src="facebook-logo-transparent-background-free-png.webp" alt="Facebook"></a>
-                        <a href="https://www.instagram.com" target="_blank"><img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram"></a>
+                    <p class="role">Web Developer & Founder</p>
+                    <div class="social" role="region" aria-label="Social Links">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
-                <!-- Add more team-card divs for additional members -->
             </div>
         </section>
-        <section class="mission">
-            <h2>Our Mission</h2>
+
+        <section class="mission" aria-labelledby="mission-heading">
+            <h2 id="mission-heading">Our Mission</h2>
             <p>
-                To deliver exceptional results and exceed our clients' expectations. We strive to build long-term relationships and provide the best possible service, always aiming for innovation and growth.
+                To deliver exceptional results and exceed our clients' expectations. We strive to build long-term relationships and provide the best possible service, always aiming for innovation and excellence in every project we undertake.
             </p>
         </section>
     </main>
-    <footer>
+
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Professional Services. Crafted with passion by Rohit Vishwakarma.</p>
+            <p>
+                &copy; <span id="year"></span> Professional Services. 
+                Crafted with <span aria-label="love">❤️</span> by Rohit Vishwakarma.
+            </p>
         </div>
     </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -3,49 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Rohit Portfolio</title>
+    <meta name="description" content="Contact Rohit Vishwakarma - Get in touch for web development and professional services.">
+    <meta name="author" content="Rohit Vishwakarma">
+    <meta name="theme-color" content="#053b73">
+    <title>Contact | Rohit Vishwakarma Portfolio</title>
     <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a class="logo" href="index.html">Portfolio</a>
-            <ul>
-                <li><a href="localstorage.html">Login</a></li>
-                <li><a class="active" href="contact.html">Contact</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Rohit Portfolio Home">Portfolio</a>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                <li role="none"><a href="localstorage.html" role="menuitem" aria-label="Login Page">Login</a></li>
+                <li role="none"><a href="contact.html" class="active" role="menuitem" aria-label="Contact">Contact</a></li>
+                <li role="none"><a href="services.html" role="menuitem" aria-label="Services">Services</a></li>
+                <li role="none"><a href="about.html" role="menuitem" aria-label="About">About</a></li>
             </ul>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
-    <main>
-        <section class="contact">
-            <h2>Get in Touch</h2>
+
+    <main role="main" aria-label="Contact Page Content">
+        <section class="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
             <div class="contact-form-wrapper">
                 <div class="contact-card">
-                    <form>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message"></textarea>
-                        <button type="submit">Send</button>
+                    <form aria-label="Contact Form">
+                        <div class="form-group">
+                            <label for="name">Name: <span aria-label="required">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email: <span aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message: <span aria-label="required">*</span></label>
+                            <textarea id="message" name="message" required aria-required="true" placeholder="Your message" rows="5"></textarea>
+                        </div>
+                        
+                        <button type="submit" aria-label="Send Contact Form">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </form>
                 </div>
-                <div class="contact-info-card">
-                    <h3>Contact Information</h3>
-                    <p><b>Phone:</b> 7303845703</p>
-                    <p><b>Email:</b> rohit9722vk@gmail.com</p>
-                    <p><b>Address:</b> House no.223, Near Shanti Atta Chakki, Mangol Pur Kalan, Rohini Sector-2, Delhi-110085</p>
+                
+                <div class="contact-info-card" aria-labelledby="contact-info-heading">
+                    <h3 id="contact-info-heading">Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone:</strong>
+                            <a href="tel:+917303845703">+91 7303845703</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong>
+                            <a href="mailto:rohit9722vk@gmail.com">rohit9722vk@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address:</strong>
+                            <p>House no.223, Near Shanti Atta Chakki, Mangol Pur Kalan, Rohini Sector-2, Delhi-110085</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Professional Services. Crafted with passion by Rohit Vishwakarma.</p>
+            <p>
+                &copy; <span id="year"></span> Professional Services. 
+                Crafted with <span aria-label="love">❤️</span> by Rohit Vishwakarma.
+            </p>
         </div>
     </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
