@@ -3,43 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Rohit Portfolio</title>
+    <meta name="description" content="Services offered by Rohit Vishwakarma - Web Development, Data Entry, and Professional Services.">
+    <meta name="author" content="Rohit Vishwakarma">
+    <meta name="theme-color" content="#053b73">
+    <title>Services | Rohit Vishwakarma Portfolio</title>
     <link rel="stylesheet" href="Services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-        <nav class="navbar">
-            <a class="logo" href="index.html">Portfolio</a>
-            <ul>
-                <li><a href="localstorage.html">Login</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="active" href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Rohit Portfolio Home">Portfolio</a>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                <li role="none"><a href="localstorage.html" role="menuitem" aria-label="Login Page">Login</a></li>
+                <li role="none"><a href="contact.html" role="menuitem" aria-label="Contact">Contact</a></li>
+                <li role="none"><a href="services.html" class="active" role="menuitem" aria-label="Services">Services</a></li>
+                <li role="none"><a href="about.html" role="menuitem" aria-label="About">About</a></li>
             </ul>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
-<main>
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="services-cards">
-            <div class="service-card">
-                <h3>Website Making</h3>
-                <p>Using HTML, CSS and Some Javascript to Make a Website Which is Hosted via your Github Account.</p>
-                <button onclick="window.location.href='https://rohit9722vk-arch.github.io/Rohit-Portfolio/contact.html'">Contact Us</button>
+
+    <main role="main" aria-label="Services Page Content">
+        <section class="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Services</h2>
+            <div class="services-cards">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom web design and development using HTML, CSS, and JavaScript. Creating responsive, user-friendly websites hosted on GitHub.</p>
+                    <a href="contact.html" class="service-btn" aria-label="Contact for Website Development">
+                        <i class="fas fa-arrow-right"></i> Contact Us
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Entry Services</h3>
+                    <p>Accurate and efficient data entry, database management, and information organization for businesses of all sizes.</p>
+                    <a href="contact.html" class="service-btn" aria-label="Contact for Data Entry Services">
+                        <i class="fas fa-arrow-right"></i> Contact Us
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Modern, responsive front-end solutions with smooth animations, dark mode support, and accessibility compliance.</p>
+                    <a href="contact.html" class="service-btn" aria-label="Contact for Frontend Development">
+                        <i class="fas fa-arrow-right"></i> Contact Us
+                    </a>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Data Entry Operator</h3>
-                <p>Accurately Inputting and Updating Various Types of Data into Computer Systems and Databases.</p>
-                <button onclick="window.location.href='https://rohit9722vk-arch.github.io/Rohit-Portfolio/contact.html'">Contact Us</button>
-            </div>
-            <!-- Add more service-card divs for more services -->
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>
+                &copy; <span id="year"></span> Professional Services. 
+                Crafted with <span aria-label="love">❤️</span> by Rohit Vishwakarma.
+            </p>
         </div>
-    </section>
-</main>
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Professional Services. Crafted with passion by Rohit Vishwakarma.</p>
-    </div>
-</footer>
+    </footer>
+
+    <button id="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

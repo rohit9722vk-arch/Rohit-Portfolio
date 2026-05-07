@@ -2,25 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LocalStorage Example</title>
-    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login and data management page with LocalStorage functionality.">
+    <meta name="author" content="Rohit Vishwakarma">
+    <meta name="theme-color" content="#053b73">
+    <title>Login | Rohit Vishwakarma Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .login-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        }
+        [data-theme="dark"] .login-container {
+            background: rgba(30, 30, 30, 0.95);
+        }
+        .login-container h2 {
+            text-align: center;
+            color: #053b73;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #053b73;
+        }
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .buttons-group button {
+            flex: 1;
+            min-width: 150px;
+        }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(5, 152, 98, 0.1);
+            border-left: 4px solid #059862;
+            min-height: 50px;
+        }
+    </style>
 </head>
 <body>
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Rohit Portfolio Home">Portfolio</a>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                <li role="none"><a href="localstorage.html" class="active" role="menuitem" aria-label="Login Page">Login</a></li>
+                <li role="none"><a href="contact.html" role="menuitem" aria-label="Contact">Contact</a></li>
+                <li role="none"><a href="services.html" role="menuitem" aria-label="Services">Services</a></li>
+                <li role="none"><a href="about.html" role="menuitem" aria-label="About">About</a></li>
+            </ul>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
 
-    <h2>Store Data in LocalStorage</h2>
+    <main role="main">
+        <div class="login-container">
+            <h2><i class="fas fa-lock"></i> Data Management</h2>
+            <form aria-label="Data Storage Form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="name">Enter Name: <span aria-label="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Enter Email: <span aria-label="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
+                </div>
+                
+                <div class="buttons-group">
+                    <button type="button" onclick="saveData()" aria-label="Save Data to LocalStorage">
+                        <i class="fas fa-save"></i> Save Data
+                    </button>
+                    <button type="button" onclick="getData()" aria-label="Retrieve Saved Data">
+                        <i class="fas fa-search"></i> Get Data
+                    </button>
+                    <button type="button" onclick="clearData()" aria-label="Clear All Saved Data">
+                        <i class="fas fa-trash"></i> Clear Data
+                    </button>
+                </div>
+            </form>
+            
+            <div id="output" role="region" aria-label="Stored Data Display" aria-live="polite"></div>
+        </div>
+    </main>
 
-    <label>Enter Name:</label><br>
-    <input type="text" id="name"><br><br>
+    <footer role="contentinfo">
+        <div class="container">
+            <p>
+                &copy; <span id="year"></span> Professional Services. 
+                Crafted with <span aria-label="love">❤️</span> by Rohit Vishwakarma.
+            </p>
+        </div>
+    </footer>
 
-    <label>Enter Email:</label><br>
-    <input type="email" id="email"><br><br>
+    <button id="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <button onclick="saveData()">Save Data</button>
-    <button onclick="getData()">Get Data</button>
-    <button onclick="clearData()">Clear Data</button>
-
-    <h3>Stored Data:</h3>
-    <p id="output"></p>
-
+    <script src="script.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
