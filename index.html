@@ -1,47 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rohit Vishwakarma Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Rohit Vishwakarma, student at B.S.A.I.T.M Vikaspuri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Rohit Vishwakarma, student at B.S.A.I.T.M Vikaspuri. Showcasing projects and skills in web development.">
     <meta name="author" content="Rohit Vishwakarma">
+    <meta name="theme-color" content="#053b73">
+    <meta property="og:title" content="Rohit Vishwakarma Portfolio">
+    <meta property="og:description" content="Student developer portfolio showcasing web development projects and skills">
+    <meta property="og:type" content="website">
+    
+    <title>Rohit Vishwakarma - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a class="logo" href="index.html">Portfolio</a>
-            <ul>
-                <li><a href="localstorage.html">Login</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
+    <!-- Navigation Header -->
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <a href="index.html" class="logo" aria-label="Rohit Portfolio Home">
+                Portfolio
+            </a>
+            
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-label="Home">Home</a></li>
+                <li role="none"><a href="localstorage.html" role="menuitem" aria-label="Login Page">Login</a></li>
+                <li role="none"><a href="contact.html" role="menuitem" aria-label="Contact">Contact</a></li>
+                <li role="none"><a href="services.html" role="menuitem" aria-label="Services">Services</a></li>
+                <li role="none"><a href="about.html" role="menuitem" aria-label="About">About</a></li>
             </ul>
+            
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Switch theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
     </header>
-    <main>
-        <div class="profile-info">
-            <h1>Rohit Vishwakarma</h1>
-            <h2>Student and learner</h2>
-            <p>Studying in B.S.A.I.T.M Vikaspuri</p>
+
+    <!-- Main Content -->
+    <main role="main">
+        <section class="profile-info" aria-labelledby="profile-name">
+            <h1 id="profile-name">Rohit Vishwakarma</h1>
+            <h2>Student & Web Developer</h2>
+            <p>
+                Passionate learner studying at <strong>B.S.A.I.T.M Vikaspuri</strong>. 
+                Specializing in frontend development and creating interactive web experiences.
+            </p>
+            
             <div class="container">
-                <a href="rohit.docx" download="rohit.docx"><button>Download CV</button></a>
-                <div class="social-links">
-                <a href="https://www.facebook.com"><img src="facebook-logo-transparent-background-free-png.webp" alt="facebook"></a>
-                <a href="https://www.instagram.com"><img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="instagram"></a>
+                <a href="rohit.docx" download="Rohit-Vishwakarma-CV.docx" aria-label="Download CV">
+                    <button aria-label="Download Curriculum Vitae">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </a>
+                
+                <div class="social-links" role="region" aria-label="Social Links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" 
+                       aria-label="Follow on Facebook" title="Visit Facebook Profile">
+                        <img src="facebook-logo-transparent-background-free-png.webp" alt="Facebook" 
+                             loading="lazy" decoding="async">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" 
+                       aria-label="Follow on Instagram" title="Visit Instagram Profile">
+                        <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram" 
+                             loading="lazy" decoding="async">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" 
+                       aria-label="Connect on LinkedIn" title="Visit LinkedIn Profile">
+                        <img src="linkedin-logo.webp" alt="LinkedIn" loading="lazy" decoding="async">
+                    </a>
+                    <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" 
+                       aria-label="View GitHub Profile" title="Visit GitHub Profile">
+                        <img src="github-logo.webp" alt="GitHub" loading="lazy" decoding="async">
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="profile-picture">
-            <img src="Rohit-pic.jfif" alt="Rohit Vishwakarma">
-        </div>
+        </section>
+
+        <figure class="profile-picture">
+            <img src="Rohit-pic.jfif" alt="Rohit Vishwakarma - Profile Picture" 
+                 loading="lazy" decoding="async">
+            <figcaption class="sr-only">Professional profile picture of Rohit Vishwakarma</figcaption>
+        </figure>
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
         <div>
-            <p>&copy; 2025 Professional Services. Crafted with passion by Rohit Vishwakarma.</p>
+            <p>
+                &copy; <span id="year"></span> Professional Services. 
+                Crafted with <span aria-label="love">❤️</span> by Rohit Vishwakarma.
+            </p>
+            <p>
+                <small>
+                    <a href="#" aria-label="Privacy Policy">Privacy Policy</a> | 
+                    <a href="#" aria-label="Terms of Service">Terms of Service</a>
+                </small>
+            </p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top of page" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Accessibility: Skip to main content link -->
+    <a href="#" class="sr-only">Skip to main content</a>
 </body>
 </html>
