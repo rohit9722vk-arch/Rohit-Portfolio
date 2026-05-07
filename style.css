@@ -1,35 +1,92 @@
+/* ============================================
+   ENHANCED PORTFOLIO STYLES
+   ============================================ */
+
+/* CSS Variables for Theme Support */
+:root {
+    --primary-color: #053b73;
+    --secondary-color: #d45e16;
+    --success-color: #059862;
+    --error-color: #dc3545;
+    --info-color: #0dcaf0;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+    --primary-color: #4da6d6;
+    --secondary-color: #f4a460;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --border-color: #404040;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
     background: url('OIP.WEBP');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
 header {
     background: rgba(76, 209, 209, 0.95);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
 }
+
+[data-theme="dark"] header {
+    background: rgba(45, 120, 130, 0.95);
+}
+
 header nav {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 15px ;
-    padding: 25px 0 ;
+    margin: 0 15px;
+    padding: 25px 0;
 }
+
 header nav .logo {
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: #053b73;
+    color: var(--primary-color);
     text-decoration: none;
     letter-spacing: 1px;
-    text-align: left;
-    margin-left: 3px;
+    transition: transform 0.3s ease;
 }
+
+header nav .logo:hover {
+    transform: scale(1.05);
+}
+
 header nav ul {
     display: flex;
     list-style: none;
@@ -37,112 +94,549 @@ header nav ul {
     padding: 0;
     gap: 30px;
     font-size: 1.5rem;
-    text-align: right;
 }
+
 header nav ul li a {
-    color: #053b73;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     padding: 8px 14px;
     border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
 header nav ul li a:hover,
 header nav ul li a.active {
-    background: #053b73;
+    background: var(--primary-color);
     color: #fff;
+    transform: translateY(-2px);
 }
+
+/* Mobile Menu Toggle */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
 main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 40px;
-    padding-right: 355px;
+    margin: 25px;
+    padding: 50px 40px;
     border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.95);
+    animation: slideInUp 0.6s ease-out;
 }
+
+[data-theme="dark"] main {
+    background: rgba(30, 30, 30, 0.95);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .profile-info {
     width: 60%;
     margin-left: 20px;
+    animation: fadeIn 0.8s ease-out 0.2s both;
 }
+
 .profile-info h1 {
     font-size: 2.8rem;
-    color: #053b73;
-    margin-bottom: 0px;
+    color: var(--primary-color);
+    margin-bottom: 0;
+    transition: color 0.3s ease;
 }
+
 .profile-info h2 {
-    font-size: 2.0rem;
-    color: #d45e16;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 0;
+    transition: color 0.3s ease;
 }
+
 .profile-info p {
     font-size: 1.5rem;
     margin-top: 3px;
+    line-height: 1.6;
 }
-.profile-info button {
-    background-color: #059862;
-    color: white;
-    border: 2px solid #000000;
-    border-radius: 50px;
-    padding: 15px 25px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.2s, color 0.2s;
-}
-.profile-info button:hover {
-    background-color: #86472e;
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(76,209,209,0.15);
-}
+
 .profile-picture {
     width: 40%;
+    animation: fadeIn 0.8s ease-out 0.4s both;
 }
+
 .profile-picture img {
     border-radius: 50%;
     width: 100%;
     height: auto;
-    border: 2px solid #000000;
-    margin-left: 310px;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(5, 59, 115, 0.3);
 }
-.social-links {
-    display: block;
+
+.profile-picture img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(5, 59, 115, 0.5);
 }
-.social-links a {
-    margin-right: 10px;
+
+/* ============================================
+   BUTTONS & LINKS
+   ============================================ */
+.profile-info button {
+    background: linear-gradient(135deg, var(--success-color), #05b882);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(5, 152, 98, 0.3);
 }
-.social-links img {
-    width: 84px;
-    height: 84px;
-    filter: grayscale(0.2);
-    transition: background 0.2s, color 0.2s;
-    border-radius: 100%;
+
+.profile-info button:hover {
+    background: linear-gradient(135deg, #05b882, var(--success-color));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(5, 152, 98, 0.5);
 }
-.social-links img:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(76,209,209,0.15);
+
+.profile-info button:active {
+    transform: translateY(-1px);
 }
+
+/* ============================================
+   SOCIAL LINKS
+   ============================================ */
 .container {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-top: 20px;
 }
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+}
+
+.social-links img {
+    width: 60px;
+    height: 60px;
+    filter: grayscale(0.3);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-links img:hover {
+    filter: grayscale(0);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(76, 209, 209, 0.4);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
-    background: #053b73;
+    background: var(--primary-color);
     color: #fff;
-    padding: 14px 0;
+    padding: 20px;
     text-align: center;
     font-size: 1rem;
-    margin-top: 15px;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
+    margin-top: 30px;
+    border-radius: 18px 18px 0 0;
+    transition: background 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(5, 59, 115, 0.1);
+}
+
+input.error {
+    border-color: var(--error-color);
+    background: rgba(220, 53, 69, 0.05);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    animation: slideInUp 0.3s ease;
+}
+
+.info-message {
+    color: var(--info-color);
+    padding: 10px;
+    background: rgba(13, 202, 240, 0.1);
+    border-radius: 6px;
+}
+
+/* ============================================
+   NOTIFICATION SYSTEM
+   ============================================ */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    max-width: 350px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    animation: slideInRight 0.3s ease;
+    z-index: 2000;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification-success {
+    background: var(--success-color);
+}
+
+.notification-error {
+    background: var(--error-color);
+}
+
+.notification-info {
+    background: var(--info-color);
+}
+
+.notification button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* ============================================
+   SCROLL TO TOP BUTTON
+   ============================================ */
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(5, 59, 115, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(5, 59, 115, 0.5);
+}
+
+#scroll-to-top:active {
+    transform: scale(0.95);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+#theme-toggle {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(20deg);
+}
+
+/* ============================================
+   USER DATA DISPLAY
+   ============================================ */
+.user-data-display {
+    background: linear-gradient(135deg, rgba(5, 152, 98, 0.1), rgba(13, 202, 240, 0.1));
+    border-left: 4px solid var(--success-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.user-data-display p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.saved-time {
+    color: var(--info-color);
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    main {
+        padding: 40px 30px;
+        margin: 20px;
+    }
+
+    .profile-info {
+        width: 55%;
+    }
+
+    .profile-picture {
+        width: 45%;
+    }
+
+    header nav ul {
+        gap: 20px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Show mobile menu toggle */
+    #menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(76, 209, 209, 0.98);
+        padding: 20px;
+        display: none;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        border-bottom: 1px solid rgba(5, 59, 115, 0.2);
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 15px;
+        margin: 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin: 15px;
+    }
+
+    .profile-info {
+        width: 100%;
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .profile-info h1 {
+        font-size: 2rem;
+    }
+
+    .profile-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .profile-picture {
+        width: 100%;
+    }
+
+    .profile-picture img {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .notification {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav .logo {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    .profile-info button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .social-links img {
+        width: 50px;
+        height: 50px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+    header,
+    footer,
+    #scroll-to-top,
+    #theme-toggle,
+    .notification {
+        display: none !important;
+    }
+
+    main {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
 }
