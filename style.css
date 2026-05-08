@@ -243,6 +243,7 @@ main {
    SOCIAL LINKS
    ============================================ */
 .container {
+    display: flex;
     align-items: center;
     gap: 20px;
     margin-top: 20px;
